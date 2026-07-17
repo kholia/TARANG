@@ -772,7 +772,12 @@ void MQTT::perhapsReportToMap()
     strncpy(mapReport.firmware_version, optstr(APP_VERSION), sizeof(mapReport.firmware_version));
     mapReport.region = config.lora.region;
     mapReport.modem_preset = config.lora.modem_preset;
+#if defined(TARANG_MESHMAP_COMPAT) && TARANG_MESHMAP_COMPAT
+    mapReport.has_default_channel = true;
+    LOG_WARN("TARANG MeshMap compatibility: reporting default channel despite plaintext RF");
+#else
     mapReport.has_default_channel = channels.hasDefaultChannel();
+#endif
     mapReport.has_opted_report_location = true;
 
     // Set position with precision (same as in PositionModule)

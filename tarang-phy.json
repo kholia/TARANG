@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "region": "IN_433",
+  "modem_preset": "LONG_FAST",
+  "frequency_selection": "fixed_override",
+  "frequency_hz": 433920000,
+  "bandwidth_hz": 250000,
+  "spreading_factor": 11,
+  "coding_rate_denominator": 5,
+  "sync_word": 43,
+  "preamble_symbols": 16,
+  "explicit_header": true,
+  "iq_inverted": false,
+  "crc_enabled": true,
+  "ldro_enabled": false,
+  "channel_psk_index": 1,
+  "max_erp_dbm": 10,
+  "max_duty_cycle_percent": 10
+}

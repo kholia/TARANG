@@ -964,6 +964,7 @@ bool GPS::setup()
         } else if (IS_ONE_OF(gnssModel, GNSS_MODEL_AG3335, GNSS_MODEL_AG3352)) {
 
             if (config.lora.region == meshtastic_Config_LoRaConfig_RegionCode_IN ||
+                config.lora.region == meshtastic_Config_LoRaConfig_RegionCode_IN_433 ||
                 config.lora.region == meshtastic_Config_LoRaConfig_RegionCode_NP_865) {
                 _serial_gps->write("$PAIR066,1,0,1,0,0,1*3B\r\n"); // Enable GPS+GALILEO+NAVIC
                 // GPS GLONASS GALILEO BDS QZSS NAVIC

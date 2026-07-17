@@ -169,6 +169,9 @@ const RegionInfo regions[] = {
      */
     RDEF(IN, 865.0f, 867.0f, 100, 30, false, false, PROFILE_STD, PRESET(LONG_FAST), 0),
 
+    // India G.S.R. 347(E), 2022: 433.05-434.79 MHz, 10 mW ERP, 10% duty cycle.
+    RDEF(IN_433, 433.05f, 434.79f, 10, 10, false, false, PROFILE_STD, PRESET(LONG_FAST), 0),
+
     /*
          https://rrf.rsm.govt.nz/smart-web/smart/page/-smart/domain/licence/LicenceSummary.wdk?id=219752
          https://iotalliance.org.nz/wp-content/uploads/sites/4/2019/05/IoT-Spectrum-in-NZ-Briefing-Paper.pdf
